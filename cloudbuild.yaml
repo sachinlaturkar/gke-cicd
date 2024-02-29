@@ -1,24 +1,24 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/quickstart-image', './app1' ]
+  args: ['build', '-t', 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/quickstart-image', './app1' ]
   id: 'Build Docker Image'
 
   # images:
-  # - 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/quickstart-image'
+  # - 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/quickstart-image' ]
+  args: ['push', 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/quickstart-image' ]
   id: 'Push Docker Image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/flask-image', './app2' ]
+  args: ['build', '-t', 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/flask-image', './app2' ]
   id: 'Build Docker Image2'
 
   # images:
-  # - 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/quickstart-image'
+  # - 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/gcp-demo-project-415805/gke-repo/flask-image' ]
+  args: ['push', 'us-east4-docker.pkg.dev/gcp-demo-project-415805/gcp-kubernetes/flask-image' ]
   id: 'Push Docker Image2'
 
 
